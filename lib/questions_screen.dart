@@ -31,7 +31,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 30),
             // ... spreads iterables to individual widgets instead of List<widgets> 
-            ...currentQuestion.answers.map((answerText) {
+            ...currentQuestion.getShuffledAnswers().map((answerText) {
               return AnswerButton(answerText, (){});
             })
           ],
